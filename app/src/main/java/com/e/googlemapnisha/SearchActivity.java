@@ -70,8 +70,8 @@ public class SearchActivity extends FragmentActivity implements OnMapReadyCallba
 
         latitudeLongitudeList = new ArrayList<>();
 
-        latitudeLongitudeList.add(new LatitudeLongitude(27.7134481, 85.3241922, "Nagpokhari"));
-        latitudeLongitudeList.add(new LatitudeLongitude(27.7181749, 85.3173212, "Naraynhiti durbar square"));
+        latitudeLongitudeList.add(new LatitudeLongitude(27.7134481, 85.3241922, "hayat regacy"));
+        latitudeLongitudeList.add(new LatitudeLongitude(27.7181749, 85.3173212, "bhatbhatini"));
         latitudeLongitudeList.add(new LatitudeLongitude(27.7127827, 85.3265391, "hotel annapurna"));
 
         String[] data = new String[latitudeLongitudeList.size()];
@@ -90,7 +90,7 @@ public class SearchActivity extends FragmentActivity implements OnMapReadyCallba
     private int SearchArrayList(String name) {
         for (int i = 0; i < latitudeLongitudeList.size(); i++) {
             if (latitudeLongitudeList.get(i).getMarker().contains(name)) {
-                return 1;
+                return i;
             }
         }
         return -1;
